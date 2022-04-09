@@ -12,5 +12,6 @@
             Email Address: <input type="text" name="email"><br>
         <input type="submit" value="Submit">
         </form>
+        <p>${msg}</p>
     </body>
 </html>

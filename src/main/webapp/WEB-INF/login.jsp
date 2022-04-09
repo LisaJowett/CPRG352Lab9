@@ -13,6 +13,6 @@
             password: <input type="password" name="password"><br>
             <input type="submit" value="Sign in">
         </form>
-        <a href="ForgotPasswordServlet">Have you forgotten your password?</a>
+        <a href="forgot">Have you forgotten your password?</a>
     </body>
 </html>

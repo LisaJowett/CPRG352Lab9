@@ -41,8 +41,12 @@ public class ForgotPasswordServlet extends HttpServlet
             throws ServletException, IOException 
     {
         String email = request.getParameter("email");
-        String password = request.getParameter("password");
+        String path = request.getServletContext().getRealPath("/WEB-INF");
         
         AccountService as = new AccountService();
+        as.forgotPassword(email, path);
+        request.setAttribute("msg", "If the address you entered is valid, you will receive an email very soon. Please check your email for your password.");
+
+        getServletContext().getRequestDispatcher("/WEB-INF/forgot.jsp").forward(request, response);
     }
 }
